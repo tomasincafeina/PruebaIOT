@@ -1,0 +1,49 @@
+<div class="container mx-auto p-4">
+    @for (dato of datos(); track dato.id) {
+    <div class="flex flex-row gap-8">
+      <!-- Sección izquierda (1/3) con el círculo -->
+      <div class="w-1/3 flex flex-col items-center gap-4 border-r-2 border-gray-200 pr-8">
+        <!-- Círculo principal -->
+        <div class="relative w-48 h-48 rounded-full shadow-lg bg-primary text-primary-content flex flex-col items-center justify-center">
+          <!-- Valor dato (centro) -->
+          <div class="text-5xl font-bold">{{dato.dato}}</div>
+          
+        </div>
+        
+        <!-- Texto descriptivo debajo del círculo -->
+        <div class="text-center">
+          <div class="text-lg font-semibold">Información resumida</div>
+          <div class="text-sm opacity-80">Valor: {{dato.dato}}</div>
+        </div>
+      </div>
+      
+      <!-- Sección derecha (2/3) con detalles adicionales -->
+      <div class="w-2/3 flex flex-col justify-center">
+        <div class="space-y-6">
+          <div class="text-2xl font-bold">Detalles completos</div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-base-200 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-gray-500">ID</div>
+              <div class="text-xl">{{dato.id}}</div>
+            </div>
+            
+            <div class="bg-base-200 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-gray-500">Aula</div>
+              <div class="text-xl text-secondary">{{dato.aula}}</div>
+            </div>
+            
+            <div class="bg-base-200 p-4 rounded-lg col-span-2">
+              <div class="text-sm font-semibold text-gray-500">Valor completo</div>
+              <div class="text-2xl font-mono">{{dato.dato}}</div>
+            </div>
+          </div>
+          
+          <div class="text-sm text-gray-500 mt-4">
+            Información adicional puede ir aquí...
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>

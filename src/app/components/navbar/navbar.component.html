@@ -1,0 +1,21 @@
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="flex-">
+    <a class="btn btn-ghost text-xl">Jesuitas</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li>
+        <details class="z-10">
+          <summary>{{ aulaActual() }}</summary>
+          <ul class="bg-base-100 rounded-t-none p-2 ">
+            @for (aula of aulas(); track aula) {
+            <li>
+              <a (click)="changeAula(aula)">{{ aula }}</a>
+            </li>
+            }
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>

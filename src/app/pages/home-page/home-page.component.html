@@ -1,0 +1,5 @@
+@if (aulaDatosResource.error()) {
+    <h3>{{aulaDatosResource.error()}}</h3>
+}@if(aulaDatosResource.hasValue()) {
+    <app-datos-aula [datos] = "aulaDatosResource.value()!"/> 
+}
